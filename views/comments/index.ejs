@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コメント一覧</title>
+</head>
+
+<body>
+
+    <h1>コメント一覧</h1>
+    <ul>
+        <% for (let c of commentDummyData){ %>
+            <li>
+                <!-- ユーザ名とコメンtを表示 -->
+                <%= c.username %> - <%= c.comment %>
+                        <!-- 詳細ページへのリンク -->
+                        <a href="/comments/<%= c.id %>">詳細</a>
+            </li>
+            <% } %>
+    </ul>
+    <a href="/comments/new">新規コメント作成</a>
+
+</body>
+
+</html>
